@@ -1,4 +1,4 @@
-to_read = "example.txt"
+to_read = "a_example.txt"
 
 global_books = []
 libraries = []
@@ -15,14 +15,14 @@ class library:
 f = open(to_read,"r")
 lines = f.readlines()
 
-for id,score in enumerate(lines[2].split()):
+for id,score in enumerate(lines[1].split()):
     global_books.append(book(id,score))
 
-n = 4
+n = 2
 while n < len(lines):
-    this_library = lines[n:n+3]
+    this_library = lines[n:n+2]
     parms = this_library[0].split()
     libraries.append(library(int(parms[1]),int(parms[2])))
-    for i in this_library[2].split():
+    for i in this_library[1].split():
         libraries[-1].books.append(global_books[int(i)])
-    n += 3
+    n += 2
