@@ -26,6 +26,3 @@ while n < len(lines):
     for i in this_library[2].split():
         libraries[-1].books.append(global_books[int(i)])
     n += 3
-
-for i in libraries[1].books:
-    print(i.score)
