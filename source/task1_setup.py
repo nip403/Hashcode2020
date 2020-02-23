@@ -1,4 +1,4 @@
-to_read = "b_read_on.txt"
+to_read = "a_example.txt"
 
 global_books = []
 libraries = []
@@ -35,7 +35,6 @@ while n < len(lines):
     this_library = lines[n:n+2]
     parms = this_library[0].split()
     libraries.append(library(int(parms[1]),int(parms[2])))
-
     for i in this_library[1].split():
         libraries[-1].books.append(global_books[int(i)])
 
